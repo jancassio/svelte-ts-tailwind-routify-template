@@ -1,22 +1,12 @@
 <script lang="ts">
-	export let name: string;
+	import { Router } from "@sveltech/routify";
+	import { routes } from "@sveltech/routify/tmp/routes";
 </script>
 
-<style>
+<style global>
 	@tailwind base;
   @tailwind components;
   @tailwind utilities;
-
-	p {
-		@apply text-gray-600 text-sm;
-	}
-
-	main {
-		@apply text-center p-1 max-w-xs my-0 mx-auto;
-	}
 </style>
 
-<main>
-	<h1 class="text-4xl text-red-600 uppercase">Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Router {routes} />

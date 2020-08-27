@@ -2,15 +2,19 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public",
+    "build": "routify -b && rollup -c",
+    "dev": "routify -c watch",
+    "watch": "rollup -c -w",
+    "start": "sirv public --single",
     "validate": "svelte-check"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^4.0.0",
+    "@sveltech/routify": "^1.9.9",
+    "@tsconfig/svelte": "^1.0.0",
     "postcss-import": "^12.0.1",
     "postcss-load-config": "^2.1.0",
     "rollup": "^2.26.6",
@@ -20,10 +24,8 @@
     "svelte": "^3.24.1",
     "svelte-check": "^1.0.0",
     "svelte-preprocess": "^4.0.0",
-    "@rollup/plugin-typescript": "^4.0.0",
-    "typescript": "^3.9.3",
     "tslib": "^2.0.0",
-    "@tsconfig/svelte": "^1.0.0"
+    "typescript": "^3.9.3"
   },
   "dependencies": {
     "sirv-cli": "^1.0.6",
